@@ -1,2 +1,2 @@
 const context = JSON.parse(document.getElementById("context").textContent);
-alert(context.bad_URL);
+alert(decode_URI(context.bad_URL));
