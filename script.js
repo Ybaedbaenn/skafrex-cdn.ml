@@ -11,6 +11,6 @@ function initialize() {
     }
     let error_message = "The requested link: "+ bad_URL + " does not exist.";
     error_message_paragraph.innerText = error_message;
-    document.body.insertBefore(error_message, item);
+    document.body.insertBefore(error_message_paragraph, item);
   }
 }
