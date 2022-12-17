@@ -1,5 +1,6 @@
-function initialize() {
-  const context = JSON.parse(document.getElementById("context").textContent);
+const context = JSON.parse(document.getElementById("context").textContent);
+
+function check_bad_link() {
   if (context.bad_link) {
     let error_message_paragraph = document.createElement("p");
     let item = document.getElementById("form");
@@ -13,4 +14,8 @@ function initialize() {
     error_message_paragraph.innerText = error_message;
     document.body.insertBefore(error_message_paragraph, item);
   }
+}
+
+function initialize() {
+  check_bad_link();
 }
