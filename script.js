@@ -4,7 +4,7 @@ function check_bad_link() {
   if (context.bad_link) {
     const state = context;
     const url = "/";
-    history.pushState(state, "", url);
+    history.replaceState(state, "", url);
     try {
       var bad_link = decodeURIComponent(context.bad_link);
     } catch (URIError) {
