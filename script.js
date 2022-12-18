@@ -2,8 +2,9 @@ const context = JSON.parse(document.getElementById("context").textContent);
 
 function check_bad_link() {
   if (context.bad_link) {
-    let error_message_paragraph = document.createElement("p");
-    let item = document.getElementById("form");
+    const state = context
+    const url = "/"
+    history.pushState(state, "", url)
     try {
       var bad_link = decodeURIComponent(context.bad_link);
     } catch (URIError) {
@@ -15,7 +16,9 @@ function check_bad_link() {
       var bad_URL = "https://my-l.ml" + bad_link;
     }
     let error_message = "The requested link: "+ bad_URL + " does not exist.";
+    let error_message_paragraph = document.createElement("p");
     error_message_paragraph.innerText = error_message;
+    let item = document.getElementById("form");
     document.body.insertBefore(error_message_paragraph, item);
   }
 }
