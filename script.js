@@ -10,11 +10,7 @@ function check_bad_link() {
     } catch (URIError) {
       var bad_link = context.bad_link;
     }
-    if (bad_link.slice(-1) == "/") {
-      var bad_URL = "https://my-l.ml" + bad_link.slice(0, -1);
-    } else {
-      var bad_URL = "https://my-l.ml" + bad_link;
-    }
+    let bad_URL = "https://my-l.ml" + bad_link;
     let error_message = "The requested link: "+ bad_URL + " does not exist.";
     let error_message_paragraph = document.createElement("p");
     error_message_paragraph.innerText = error_message;
