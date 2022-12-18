@@ -2,9 +2,9 @@ const context = JSON.parse(document.getElementById("context").textContent);
 
 function check_bad_link() {
   if (context.bad_link) {
-    const state = context
-    const url = "/"
-    history.pushState(state, "", url)
+    const state = context;
+    const url = "/";
+    history.pushState(state, "", url);
     try {
       var bad_link = decodeURIComponent(context.bad_link);
     } catch (URIError) {
