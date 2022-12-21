@@ -11,7 +11,7 @@ function check_bad_short_link() {
     } catch (URIError) {
     }
     let bad_page_URL = "https://my-l.ml/" + bad_short_link;
-    let error_message = "The requested link: "+ bad_URL + " does not exist.";
+    let error_message = "The requested link: "+ bad_page_URL + " does not exist.";
     let error_message_paragraph = document.createElement("p");
     error_message_paragraph.innerText = error_message;
     let item = document.getElementById("form");
