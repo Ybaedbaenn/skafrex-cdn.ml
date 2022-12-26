@@ -1,7 +1,7 @@
 const context = JSON.parse(document.getElementById("context").textContent);
 
 function check_bad_short_link() {
-  var bad_short_link = window.location.pathname.ltrim("/")
+  var bad_short_link = window.location.pathname.slice(1)
   if (bad_short_link) {
     const state = context;
     const url = "/";
